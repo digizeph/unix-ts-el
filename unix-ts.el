@@ -6,7 +6,7 @@
 ;; Maintainer: Mingwei Zhang <mingwei@mwzhang.com>
 ;; Created: August 01, 2021
 ;; Modified: August 01, 2021
-;; Version: 0.0.1
+;; Version: 0.1.0
 ;; Keywords: timestamp tools unix utility
 ;; Homepage: https://github.com/digizeph/unix-ts-el
 ;; Package-Requires: ((emacs "24.3"))
@@ -34,6 +34,7 @@ Example: unix time 0 ===> 1970-01-01T00:00:00+0000
 
 The function can be run interactively or directly over a number."
   (interactive "nTimestamp: ")
+  (message (format "%s" time))
   (let* ((timezone (or timezone "UTC"))
          (ts-str (format "%s" (or time (current-word))))
          (ts-int (string-to-number ts-str))
@@ -43,8 +44,8 @@ The function can be run interactively or directly over a number."
           ;; send message to Message buffer
           ;; copy to kill-ring (clipboard)
           (message (format "%d %s ==> %s" ts-int timezone rfc_str))
-          (kill-new rfc_str)))
-    (message "not a number")))
+          (kill-new rfc_str))
+      (message "not a number"))))
 
 (defun unix-ts-now()
   "Get current unix timestamp as integer and copy it to clipboard."
