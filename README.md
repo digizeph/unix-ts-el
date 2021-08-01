@@ -1,4 +1,5 @@
-# unix-ts-el
+# unix-ts-el 
+[![Elisp Checks](https://github.com/digizeph/unix-ts-el/actions/workflows/main.yml/badge.svg)](https://github.com/digizeph/unix-ts-el/actions/workflows/main.yml)
 
 Elisp package for handling unix timestamps in Emacs. 
 
