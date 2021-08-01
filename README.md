@@ -2,6 +2,24 @@
 
 Elisp package for handling unix timestamps in Emacs. 
 
+## Installation
+
+### General
+
+`M-x load-file` and load the `unix-ts.el` file.
+
+### Doom Emacs
+
+Install the package (in your `packages.el` file):
+```elisp
+(package! unix-ts :recipe (:host github :repo "digizeph/unix-ts-el"))
+```
+
+Use the package (in your `config.el` file):
+```elisp
+(use-package! unix-ts)
+```
+
 ## Functions
 
 ### `unix-ts-now`
